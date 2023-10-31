@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Загадка Эйнштейна</title>
+</head>
+<body>
+
+<form th:method="PATCH" th:action="@{/title/add}">
+
+
+    <label for="color">Выберите цвет:</label>
+
+    <select th:object="${color}" th:field="*{id}" id="color">
+        <option th:each="color: ${colors}" th:value="${color.getId()}"
+                th:text="${color.getName()}"></option>
+    </select>
+
+    <select th:object="${color}" th:field="*{id2}" id="color2">
+        <option th:each="color: ${colors}" th:value="${color.getId()}"
+                th:text="${color.getName()}"></option>
+    </select>
+
+    <select th:object="${color}" th:field="*{id3}" id="color3">
+        <option th:each="color: ${colors}" th:value="${color.getId()}"
+                th:text="${color.getName()}"></option>
+    </select>
+
+    <select th:object="${color}" th:field="*{id4}" id="color4">
+        <option th:each="color: ${colors}" th:value="${color.getId()}"
+                th:text="${color.getName()}"></option>
+    </select>
+
+    <select th:object="${color}" th:field="*{id5}" id="color5">
+        <option th:each="color: ${colors}" th:value="${color.getId()}"
+                th:text="${color.getName()}"></option>
+    </select>
+    <br>
+
+    <input type="submit" value="Проверить"/>
+    <br>
+    <p th:text="${message}" />
+</form>
+
+</body>
+</html>

@@ -9,7 +9,9 @@
 <form th:method="PATCH" th:action="@{/title/add}">
 
 
-    <label for="color">Выберите цвет:</label>
+    <label for="color">Выберите цвет: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+
 
     <select th:object="${color}" th:field="*{id}" id="color">
         <option th:each="color: ${colors}" th:value="${color.getId()}"
@@ -35,6 +37,37 @@
         <option th:each="color: ${colors}" th:value="${color.getId()}"
                 th:text="${color.getName()}"></option>
     </select>
+
+    <br>
+
+    <label for="nationality">Выберите национальность:</label>
+
+
+    <select th:object="${nationality}" th:field="*{id}" id="nationality">
+        <option th:each="nationality: ${nationalities}" th:value="${nationality.getId()}"
+                th:text="${nationality.getName()}"></option>
+    </select>
+
+    <select th:object="${nationality}" th:field="*{id2}" id="nationality2">
+        <option th:each="nationality: ${nationalities}" th:value="${nationality.getId()}"
+                th:text="${nationality.getName()}"></option>
+    </select>
+
+    <select th:object="${nationality}" th:field="*{id3}" id="nationality3">
+        <option th:each="nationality: ${nationalities}" th:value="${nationality.getId()}"
+                th:text="${nationality.getName()}"></option>
+    </select>
+
+    <select th:object="${nationality}" th:field="*{id4}" id="nationality4">
+        <option th:each="nationality: ${nationalities}" th:value="${nationality.getId()}"
+                th:text="${nationality.getName()}"></option>
+    </select>
+
+    <select th:object="${nationality}" th:field="*{id5}" id="nationality5">
+        <option th:each="nationality: ${nationalities}" th:value="${nationality.getId()}"
+                th:text="${nationality.getName()}"></option>
+    </select>
+
     <br>
 
     <input type="submit" value="Проверить"/>
